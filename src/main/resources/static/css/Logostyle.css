@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif, 'Arial', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #D2D2D2;
+    background-image:
+            repeating-linear-gradient(
+                    to right, transparent 0 100px,
+                    #25283b22 100px 101px
+            ),
+            repeating-linear-gradient(
+                    to bottom, transparent 0 100px,
+                    #25283b22 100px 101px
+            );
+}
+
+body::before{
+    position: absolute;
+    width: min(1400px, 90vw);
+    top: 10%;
+    left: 50%;
+    height: 90%;
+    transform: translateX(-50%);
+    content: '';
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    pointer-events: none;
+}
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color:#ffffff;
+    border-bottom: 1px solid #000000;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.nav-left {
+    align-items: center;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-left a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-center {
+    display: flex;
+    align-items: center;
+}
+
+.nav-center a.logo {
+    margin-right: 80px;
+}
+
+.nav-center ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.nav-center a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-right i {
+    cursor: pointer;
+}
+
+/* Login Container */
+.login-container {
+    width: 400px;
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    position: relative;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Tabs (Login e Registrazione) */
+.tab {
+    padding: 15px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.tab h2 {
+    font-size: 22px;
+    color: #333;
+}
+
+.tab p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Input Fields */
+.input-field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-field input {
+    width: 100%;
+    height: 45px;
+    border-radius: 6px;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: white;
+    color: black;
+    outline: none;
+}
+
+.input-field label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #666;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.input-field input:focus {
+    border: 1px solid #007bff;
+}
+
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
+    top: 5px;
+    left: 10px;
+    font-size: 12px;
+    background: white;
+    padding: 0 5px;
+    color: #007bff;
+}
+
+/* Buttons */
+.login-btn, .register-btn {
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #007bff;
+    color: white;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: #1e7e34;
+}
+
+.register-btn {
+    background: #007bff;
+}
+
+.register-btn:hover {
+    background: #1e7e34;
+}
+
+/* Switch Form Link */
+.switch-form {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.switch-form a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.switch-form a:hover {
+    text-decoration: underline;
+}
+
+/* Forgot Password */
+.forgot-password {
+    display: block;
+    text-align: right;
+    margin-bottom: 15px;
+    color: #007bff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
