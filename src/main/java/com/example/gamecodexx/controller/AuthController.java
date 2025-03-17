@@ -11,6 +11,11 @@ public class AuthController {
         return "auth"; // mostrerà auth.html
     }
 
+    @GetMapping("/homepage")
+    public String showHomepage() {
+        return "homepage";
+    }
+
 
 
 }

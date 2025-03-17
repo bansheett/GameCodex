@@ -18,17 +18,17 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/login", "/register", "/auth").permitAll()
                         .requestMatchers("/usercontroller/**").permitAll()
-                        .requestMatchers("/img/**", "/css/**").permitAll()
+                        .requestMatchers("/img/**", "/css/**", "/templates/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .formLogin(form -> form
                         .loginPage("/login").permitAll()
                         .loginProcessingUrl("/login")
-                        .defaultSuccessUrl("/home", true)
+                        .defaultSuccessUrl("/homepage", true)
                 )
                 .logout(logout -> logout
                         .logoutUrl("/logout")
-                        .logoutSuccessUrl("/home")
+                        .logoutSuccessUrl("/homepage")
                         .invalidateHttpSession(true)
                         .deleteCookies("JSESSIONID")
                         .permitAll()
