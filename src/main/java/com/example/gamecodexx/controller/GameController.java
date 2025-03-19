@@ -20,4 +20,17 @@ public class GameController {
         gameService.fetchAndSaveGames(search);
         return ResponseEntity.ok("Giochi recuperati e salvati nel database!");
     }
+
+    // Endpoint per avviare il recupero di tutti i giochi
+    @PostMapping("/fetch-all")
+    public ResponseEntity<String> fetchAllGames() {
+        gameService.fetchAndSaveAllGames();
+        return ResponseEntity.ok("Avviato il processo di recupero di tutti i giochi. Questo potrebbe richiedere molto tempo.");
+    }
+
+    // Endpoint per controllare lo stato del processo di recupero
+    @GetMapping("/fetch-status")
+    public ResponseEntity<String> getFetchStatus() {
+        return ResponseEntity.ok(gameService.getFetchStatus());
+    }
 }

@@ -75,29 +75,5 @@
         <p th:text="${param.success}"></p>
     </div>
 </div>
-
-
-
-<!-- Script per lo switch tra login e registrazione -->
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const loginForm = document.getElementById("login-form");
-        const registerForm = document.getElementById("register-form");
-        const showRegister = document.getElementById("show-register");
-        const showLogin = document.getElementById("show-login");
-
-        showRegister.addEventListener("click", function (event) {
-            event.preventDefault();
-            loginForm.classList.add("hidden");
-            registerForm.classList.remove("hidden");
-        });
-
-        showLogin.addEventListener("click", function (event) {
-            event.preventDefault();
-            registerForm.classList.add("hidden");
-            loginForm.classList.remove("hidden");
-        });
-    });
-</script>
 </body>
 </html>
